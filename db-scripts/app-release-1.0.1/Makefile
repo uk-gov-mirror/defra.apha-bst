@@ -14,8 +14,8 @@ post-deploy:
 	@echo ">>> Waiting 180 seconds before starting deployment..."
 	@sleep 180
 	@echo "Running post-deploy scripts..."
-	@$(SQLCMD) -d $(DB_NAME) -i create_sample_table.sql
-	@$(SQLCMD) -d $(DB_NAME) -i insert_data_sample_table.sql	
+	@$(SQLCMD) -d $(DB_NAME) -i create_dummy_table.sql
+	@$(SQLCMD) -d $(DB_NAME) -i insert_data_dummy_table.sql	
 	@echo "DB-deploy scripts completed."
 
 # Help
